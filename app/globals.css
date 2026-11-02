@@ -1,40 +1,12 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   box-sizing: border-box;
-  padding: 0;
+}
+
+body {
   margin: 0;
+  background: #f3f4f8;
+  color: #1f2937;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 a {
@@ -42,8 +14,129 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ef4444;
+  color: white;
+  padding: 16px 24px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Judul & search */
+.page-title {
+  margin: 0 0 4px;
+  font-size: 1.8rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 16px 0 24px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+/* Daftar & kartu */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: block;
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+}
+
+.card h2 {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Badge tipe */
+.badge {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: white;
+  background: #6b7280;
+  text-transform: capitalize;
+}
+
+.badge-grass { background: #22c55e; }
+.badge-fire { background: #f97316; }
+.badge-water { background: #3b82f6; }
+.badge-electric { background: #eab308; }
+.badge-ghost { background: #7c3aed; }
+.badge-psychic { background: #ec4899; }
+.badge-rock { background: #a8a29e; }
+.badge-normal { background: #9ca3af; }
+
+/* Halaman detail */
+.detail {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.detail img {
+  image-rendering: pixelated;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Halaman about */
+.about p {
+  line-height: 1.7;
 }
