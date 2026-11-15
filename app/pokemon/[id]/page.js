@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { pokemonList } from "../../../data/pokemon";
 
+export function generateStaticParams() {
+  return pokemonList.map((p) => ({ id: String(p.id) }));
+}
+
 export default async function DetailPage({ params }) {
   const { id } = await params;
   const pokemon = pokemonList.find((p) => p.id === Number(id));
