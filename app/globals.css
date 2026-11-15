@@ -140,3 +140,9 @@ a {
 .about p {
   line-height: 1.7;
 }
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: #6b7280;
+}

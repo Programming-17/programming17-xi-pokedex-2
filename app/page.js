@@ -2,6 +2,9 @@ import { pokemonList } from "../data/pokemon";
 import SearchBar from "../components/SearchBar";
 import PokemonList from "../components/PokemonList";
 
+// TODO: import PokemonBrowser dari "../components/PokemonBrowser"
+// import ___ from "___";
+
 export default function Home() {
   return (
     <div>
@@ -10,6 +13,9 @@ export default function Home() {
 
       <SearchBar />
       <PokemonList pokemons={pokemonList} />
+
+      {/* TODO: kirim pokemonList lewat prop pokemons */}
+      {/* <PokemonBrowser ___={___} /> */}
     </div>
   );
 }
