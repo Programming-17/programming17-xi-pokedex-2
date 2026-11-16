@@ -110,6 +110,35 @@ export default function PokemonBrowser({ pokemons }) {
 }
 ```
 
+```js
+"use client";
+
+// TODO 1: import hook state dari "react"
+import { ___ } from "react";
+import SearchBar from "./SearchBar";
+import PokemonList from "./PokemonList";
+
+export default function PokemonBrowser({ pokemons }) {
+  // TODO 2: buat state "keyword" dengan nilai awal "pi"
+  const [___, ___] = useState(___);
+
+  // TODO 3: filter nama, tidak peka huruf besar/kecil
+  const hasil = pokemons.___((p) =>
+    p.name.___().includes(keyword.___())
+  );
+
+  return (
+    <div>
+      <SearchBar placeholder="Cari nama Pokémon..." />
+      <p className="muted">
+        Kata kunci: "{___}", menampilkan {hasil.length} dari {pokemons.length} Pokémon
+      </p>
+      <PokemonList pokemons={___} />
+    </div>
+  );
+}
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
