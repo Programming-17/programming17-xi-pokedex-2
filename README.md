@@ -139,6 +139,24 @@ export default function PokemonBrowser({ pokemons }) {
 }
 ```
 
+```js
+"use client";
+
+// TODO: terima value, onChange, dan placeholder dari props
+export default function SearchBar({ ___, ___, placeholder = "Cari Pokémon..." }) {
+  return (
+    <input
+      className="search-bar"
+      type="text"
+      
+      placeholder={placeholder}
+      value={___}
+      onChange={(e) => ___(e.target.___)}
+    />
+  );
+}
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
